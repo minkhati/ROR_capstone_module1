@@ -11,7 +11,7 @@ RSpec.describe "ApiDev", type: :request do
   	after(:each) { City.delete_all }
 
   	it "create RDBMS-backend model" do
-  		object =  City.create(:name => "test")
+  		object =  City.create(:name => "Baltimore")
   		expect(City.find(object.id).name).to eq("Baltimore")
     end
 
@@ -20,7 +20,7 @@ RSpec.describe "ApiDev", type: :request do
   		expect(cities_path).to eq("/api/cities")
   		get city_path(object.id)
   		expect(response).to have_http_status(:ok)
-  		expect(parsed_body["name"]).to eq("Baltimore")
+      expect(parsed_body["name"]).to eq("Baltimore")
   	end
   end
 

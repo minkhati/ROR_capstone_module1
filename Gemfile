@@ -20,7 +20,6 @@ group  :development do
   gem 'rspec-rails', '~>3.5', '>=3.5.2'
 end
 
-
 group  :production do
   gem 'rails_12factor', '~>0.0', '>=0.0.3'
 end

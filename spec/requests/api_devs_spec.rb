@@ -40,8 +40,7 @@ RSpec.describe "ApiDev", type: :request do
   		expect(response).to have_http_status(:ok)
   		expect(parsed_body["name"]).to eq("Maryland")
       expect(parsed_body).to include("created_at")
-			binding.pry
-      expect(parsed_body).to include("id" => object.id.to_s)
+			expect(parsed_body).to include("id" => object.id.to_s)
   	end
   end
 end

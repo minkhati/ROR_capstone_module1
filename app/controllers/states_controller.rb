@@ -22,25 +22,25 @@ class StatesController < ApplicationController
     end
   end
 
-  # PATCH/PUT /states/1
-  # PATCH/PUT /states/1.json
-  def update
-    @state = State.find(params[:id])
-
-    if @state.update(state_params)
-      head :no_content
-    else
-      render json: @state.errors, status: :unprocessable_entity
-    end
-  end
-
-  # DELETE /states/1
-  # DELETE /states/1.json
-  def destroy
-    @state.destroy
-
-    head :no_content
-  end
+  # # PATCH/PUT /states/1
+  # # PATCH/PUT /states/1.json
+  # def update
+  #   @state = State.find(params[:id])
+  #
+  #   if @state.update(state_params)
+  #     head :no_content
+  #   else
+  #     render json: @state.errors, status: :unprocessable_entity
+  #   end
+  # end
+  #
+  # # DELETE /states/1
+  # # DELETE /states/1.json
+  # def destroy
+  #   @state.destroy
+  #
+  #   head :no_content
+  # end
 
   private
 
